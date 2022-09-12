@@ -11,6 +11,7 @@ export const Base = styled(Paper)<any>`
   display: flex;
   height: ${({ height = '100%'}) => height };
   width: ${({ width = '100%'}) => width };
+  padding: 5px;
 `
 
 export const Column = styled(Base)`
@@ -21,7 +22,7 @@ export const Row = styled(Base)`
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  margin: 5px 0;
+  margin: 5px;
 
 `
 

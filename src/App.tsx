@@ -1,8 +1,6 @@
 import React from 'react';
-import { TypingTest, Containers } from 'components'
+import { TypingTest, Containers, Header } from 'components'
 import CssBaseline from '@mui/material/CssBaseline';
-import AppBar from '@mui/material/AppBar';
-
 
 import { wordBank } from './utils/constants';
 
@@ -14,7 +12,7 @@ function App() {
 
   return (
       <Containers.Page>
-        <AppBar />
+        <Header />
         <CssBaseline />
         <TypingTest wordBank={shuffledWordBank} />
       </Containers.Page>
