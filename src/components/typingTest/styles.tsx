@@ -8,8 +8,7 @@ export const WordBankContainer = styled(Containers.Base)`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  max-height: 50%;
-  overflow: scroll;
+  max-height: 40%;
 `
 
 export const Word = styled(Typography)<any>`

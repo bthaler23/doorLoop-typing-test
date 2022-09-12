@@ -16,7 +16,7 @@ export interface IProps {
 
 export enum ETestStatus { NotStarted, Started, Finished };
 
-export default ({ wordBank = [], timer = 2 }: IProps) => {
+export default ({ wordBank = [], timer = 60 }: IProps) => {
 
   const [testStatus, updateTestStatus] = React.useState<ETestStatus>(ETestStatus.NotStarted);
   const [currentWordIdx, updateCurrentWordIdx] = React.useState(0);
@@ -77,6 +77,7 @@ export default ({ wordBank = [], timer = 2 }: IProps) => {
           typedWords={typedWords}
           wordBank={wordBank}
           timeElapsed={timer - countdown}
+          currentWordIdx={currentWordIdx}
         />
       </Containers.Column>
 
@@ -89,6 +90,7 @@ export default ({ wordBank = [], timer = 2 }: IProps) => {
         typedWords={typedWords}
         wordBank={wordBank}
         timeElapsed={timer - countdown}
+        currentWordIdx={currentWordIdx}
       />
       <Containers.Row
         elevation={3}
