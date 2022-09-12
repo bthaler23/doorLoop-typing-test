@@ -16,7 +16,7 @@ export interface IProps {
 
 export enum ETestStatus { NotStarted, Started, Finished };
 
-export default ({ wordBank = [], timer = 30 }: IProps) => {
+export default ({ wordBank = [], timer = 2 }: IProps) => {
 
   const [testStatus, updateTestStatus] = React.useState<ETestStatus>(ETestStatus.NotStarted);
   const [currentWordIdx, updateCurrentWordIdx] = React.useState(0);
@@ -67,7 +67,12 @@ export default ({ wordBank = [], timer = 30 }: IProps) => {
   if (testStatus === ETestStatus.Finished) {
     return (
       <Containers.Column>
-        Congratulations!
+        <Containers.Row
+          elevation={3}
+          height='10%'
+        >
+          <Typography variant='h3'>You Finished!</Typography>
+        </Containers.Row>
         <Stats
           typedWords={typedWords}
           wordBank={wordBank}

@@ -10,7 +10,7 @@ export const Page = styled.div`
 export const Base = styled(Paper)<any>`
   display: flex;
   height: ${({ height = '100%'}) => height };
-  width: ${({ width = '100%'}) => width };
+  width: ${({ width }) => width };
   padding: 5px;
 `
 
