@@ -1,5 +1,9 @@
 import React from 'react';
-import { TypingTest } from 'components'
+import { TypingTest, Containers } from 'components'
+import CssBaseline from '@mui/material/CssBaseline';
+import AppBar from '@mui/material/AppBar';
+
+
 import { wordBank } from './utils/constants';
 
 function App() {
@@ -7,11 +11,13 @@ function App() {
     .map(value => ({ value, sort: Math.random() }))
     .sort((a, b) => a.sort - b.sort)
     .map(({ value }) => value)
- 
+
   return (
-    <div>
-      <TypingTest wordBank={shuffledWordBank} />
-    </div>
+      <Containers.Page>
+        <AppBar />
+        <CssBaseline />
+        <TypingTest wordBank={shuffledWordBank} />
+      </Containers.Page>
   );
 }
 

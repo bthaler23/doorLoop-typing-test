@@ -14,7 +14,7 @@ export default ({ typedWords, currentWordIdx, wordBank }: IProps) => {
   const words = wordBank.map((word, idx) => {
     if (currentWordIdx === idx) {
       return (
-        <Styled.Word highlighted key={idx}>
+        <Styled.Word variant='h6' highlighted='true' key={idx}>
           <SpellCheckedWord currentSpelling={currentSpelling} currentWord={word} />
         </Styled.Word>
       )
@@ -25,6 +25,7 @@ export default ({ typedWords, currentWordIdx, wordBank }: IProps) => {
       }
       return (
         <Styled.Word
+          variant='h6' 
           key={idx}
           color={color}
         >
@@ -35,7 +36,9 @@ export default ({ typedWords, currentWordIdx, wordBank }: IProps) => {
   })
 
   return (
-    <Styled.WordBankContainer>
+    <Styled.WordBankContainer
+      variant='outlined'
+    >
       {words}
     </Styled.WordBankContainer>
   )

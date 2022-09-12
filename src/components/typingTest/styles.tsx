@@ -1,14 +1,18 @@
 import React from 'react';
 import styled from 'styled-components'
+import Typography from '@mui/material/Typography';
+
 import * as Containers from '../containers';
 
 export const WordBankContainer = styled(Containers.Base)`
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  border: 1px solid black;
+  max-height: 50%;
+  overflow: scroll;
 `
 
-export const Word = styled.div<any>`
+export const Word = styled(Typography)<any>`
   padding: 5px;
   background-color: ${({ highlighted }) => highlighted && 'lightblue'};
   color: ${({ color }) => color};
